@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .row {
+        @apply flex flex-wrap -mx-4 w-row;
+    }
+}
+
+.back-img{
+    background-image: url('../images/pic3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @layer components{
+      .timeline-img {
+          @apply object-cover w-24 h-24 border-4 border-white rounded-full shadow-md xs:absolute md:mx-auto md:right-0 md:left-0;
+      }
+      .timeline-container {
+          @apply  relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;
+      }
+      .timeline-container-left{
+          @apply md:ml-0 md:pl-0 md:mr-auto md:pr-16;
+      }
+      .timeline-pointer {
+          @apply absolute inset-0 w-4 h-4 transform rotate-45 bg-white xs:left-26 xs:top-11 left-10 md:left-14;
+      }
+      .timeline-pointer-left{
+          @apply md:left-auto md:right-14;
+      }
+  }
